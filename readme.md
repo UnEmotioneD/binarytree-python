@@ -82,13 +82,13 @@ For advanced configurations, create a `nodemon.json` file in your project direct
 
 ## Running with Configuration File
 
-Simply execut:
+Simply execute:
 
 ```zsh
 nodemon
 ```
 
-Nodemone will use the settins from `nodemon.json`.
+Nodemon will use the settings from `nodemon.json`.
 
 ---
 
@@ -128,7 +128,7 @@ npx nodemon --exc python3 --ext py binary_tree.py
 
 ## Conclusion
 
-Using Nodemon with Python automates the restart process of your scripts upon code changes, enchaning your development workflow.
+Using Nodemon with Python automates the restart process of your scripts upon code changes, enhancing your development workflow.
 Customize Nodemon to fit your project's needs and focus more on coding.
 
 ---
