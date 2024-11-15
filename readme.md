@@ -55,7 +55,7 @@ Now, Nodemon will restart whenever [.py] file changes.
 If your project includes other file types (e.g., [.html], [.css]) that should trigger a restart, specify them:
 
 ```bash
-nodemon --exec python --ext py,html,css binary_tree.py
+nodemon --exec python3 --ext py,html,css binary_tree.py
 ```
 
 ---
