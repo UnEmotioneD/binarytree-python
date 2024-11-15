@@ -69,7 +69,7 @@ For advanced configurations, create a [nodemon.json] file in your project direct
 ```json
 {
   "watch": ["*.py", "templates/", "static/"],
-  "ext": "py,
+  "ext": "py",
   "ignore": ["tests/*", "docs/*"],
   "exec": "python binary_tree.py"
 }
