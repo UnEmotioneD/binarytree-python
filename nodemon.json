@@ -1,6 +1,6 @@
 {
-  "watch": ["*.py", "templates/", "static/"],
+  "watch": ["*.py"],
   "ext": "py",
-  "ignore": ["tests/*", "docs/*"],
+  "ignore": [],
   "exec": "python3 binary_tree.py"
 }

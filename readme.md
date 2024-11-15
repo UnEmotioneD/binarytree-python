@@ -68,9 +68,9 @@ For advanced configurations, create a `nodemon.json` file in your project direct
 
 ```json
 {
-  "watch": ["*.py", "templates/", "static/"],
+  "watch": ["*.py"],
   "ext": "py",
-  "ignore": ["tests/*", "docs/*"],
+  "ignore": [],
   "exec": "python3 binary_tree.py"
 }
 ```
@@ -100,7 +100,7 @@ Exclude files or directories using the `--ignore` flag:
 nodemon --exec python3 --ext py --ignore tests/* binary_tree.py
 ```
 
-Or specify then in `nodemon.json` under the `ignore` key.
+Or specify them in `nodemon.json` under the `ignore` key.
 
 ---
 
