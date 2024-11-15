@@ -46,13 +46,13 @@ To use Nodemon with a Python script, run:
 nodemon --exec python3 --ext py binary_tree.py
 ```
 
-Now, Nodemon will restart whenever [.py] file changes.
+Now, Nodemon will restart whenever `.py` file changes.
 
 ---
 
 ## Monitoring Multiple File Extensions
 
-If your project includes other file types (e.g., [.html], [.css]) that should trigger a restart, specify them:
+If your project includes other file types (e.g., `.html`, `.css`) that should trigger a restart, specify them:
 
 ```bash
 nodemon --exec python3 --ext py,html,css binary_tree.py
@@ -62,9 +62,9 @@ nodemon --exec python3 --ext py,html,css binary_tree.py
 
 ## Creating a Configuration File
 
-For advanced configurations, create a [nodemon.json] file in your project directory.
+For advanced configurations, create a `nodemon.json` file in your project directory.
 
-## Sample [nodemon.json]
+## Sample `nodemon.json`
 
 ```json
 {
@@ -75,10 +75,10 @@ For advanced configurations, create a [nodemon.json] file in your project direct
 }
 ```
 
-- [watch]: Files or directories to monitor.
-- [ext]: File extensions to watch.
-- [ignore]: Path to exclude.
-- [exec]: Command to run on changes.
+- `watch`: Files or directories to monitor.
+- `ext`: File extensions to watch.
+- `ignore`: Path to exclude.
+- `exec`: Command to run on changes.
 
 ## Running with Configuration File
 
@@ -88,19 +88,19 @@ Simply execut:
 nodemon
 ```
 
-Nodemone will use the settins from [nodemon.json].
+Nodemone will use the settins from `nodemon.json`.
 
 ---
 
 ## Ignoring Files and Directories
 
-Exclude files or directories using the [--ignore] flag:
+Exclude files or directories using the `--ignore` flag:
 
 ```bash
 nodemon --exec python3 --ext py --ignore tests/* binary_tree.py
 ```
 
-Or specify then in [nodemon.json] under the [ignore] key.
+Or specify then in `nodemon.json` under the `ignore` key.
 
 ---
 
@@ -112,7 +112,7 @@ if you encounter a "command not found" error:
 
 - Ensure Nodemon is installed globally.
 - Add npm global packages to your PATH.
-- Alternatively, run Nodemon with [npx]:
+- Alternatively, run Nodemon with `npx`:
 
 ```bash
 npx nodemon --exc python3 --ext py binary_tree.py
@@ -121,7 +121,7 @@ npx nodemon --exc python3 --ext py binary_tree.py
 ## Changes Not Detected
 
 - Confirm you're in the correct directory.
-- Verify the file extensions with [--ext].
+- Verify the file extensions with `--ext`.
 - Check file permissions and paths.
 
 ---
