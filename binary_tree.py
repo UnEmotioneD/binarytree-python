@@ -9,6 +9,8 @@ Delete function is separated into delete leaf, 1child, 2child methods
 
 import random
 
+# pylint: disable=missing-function-docstring, too-few-public-methods
+
 
 class TreeNode:
     def __init__(self):
@@ -17,47 +19,47 @@ class TreeNode:
         self.right = None
 
 
-def inorder(node):
-    if node is None:
+def inorder(tree_node):
+    if tree_node is None:
         return
-    inorder(node.left)
-    print(node.data, end=" -> ")
-    inorder(node.right)
+    inorder(tree_node.left)
+    print(tree_node.data, end=" -> ")
+    inorder(tree_node.right)
 
 
-def delete_leaf(node, parent):
-    if parent.left == node:
-        parent.left = None
+def delete_leaf(left_node, parent_node):
+    if parent_node.left == left_node:
+        parent_node.left = None
     else:
-        parent.right = None
-    del node
+        parent_node.right = None
+    del left_node
 
 
-def delete_node_1_left(node, parent):
-    if parent:
-        if parent.left == node:
-            parent.left = node.left
+def delete_node_1_left(single_left_node, parent_node):
+    if parent_node:
+        if parent_node.left == single_left_node:
+            parent_node.left = single_left_node.left
         else:
-            parent.right = node.left
-    del node
+            parent_node.right = single_left_node.left
+    del single_left_node
 
 
-def delete_node_1_right(node, parent):
-    if parent:
-        if parent.left == node:
-            parent.left = node.right
+def delete_node_1_right(single_right_node, parent_node):
+    if parent_node:
+        if parent_node.left == single_right_node:
+            parent_node.left = single_right_node.right
         else:
-            parent.right = node.right
-    del node
+            parent_node.right = single_right_node.right
+    del single_right_node
 
 
-def delete_node_2child(node):
-    successor_parent = node
-    successor = node.right
+def delete_node_2child(two_child_node):
+    successor_parent = two_child_node
+    successor = two_child_node.right
     while successor.left is not None:
         successor_parent = successor
         successor = successor.left
-    node.data = successor.data
+    two_child_node.data = successor.data
     if successor_parent.left == successor:
         successor_parent.left = successor.right
     else:
