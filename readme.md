@@ -43,7 +43,7 @@ nodemon -V
 To use Nodemon with a Python script, run:
 
 ```bash
-nodemon --exec python --ext py binary_tree.py
+nodemon --exec python3 --ext py binary_tree.py
 ```
 
 Now, Nodemon will restart whenever [.py] file changes.
@@ -71,7 +71,7 @@ For advanced configurations, create a [nodemon.json] file in your project direct
   "watch": ["*.py", "templates/", "static/"],
   "ext": "py",
   "ignore": ["tests/*", "docs/*"],
-  "exec": "python binary_tree.py"
+  "exec": "python3 binary_tree.py"
 }
 ```
 
@@ -97,7 +97,7 @@ Nodemone will use the settins from [nodemon.json].
 Exclude files or directories using the [--ignore] flag:
 
 ```bash
-nodemon --exec python --ext py --ignore tests/* binary_tree.py
+nodemon --exec python3 --ext py --ignore tests/* binary_tree.py
 ```
 
 Or specify then in [nodemon.json] under the [ignore] key.
@@ -115,7 +115,7 @@ if you encounter a "command not found" error:
 - Alternatively, run Nodemon with [npx]:
 
 ```bash
-npx nodemon --exc python --ext py binary_tree.py
+npx nodemon --exc python3 --ext py binary_tree.py
 ```
 
 ## Changes Not Detected
